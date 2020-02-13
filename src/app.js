@@ -5,7 +5,7 @@ console.log(greeting);
 
 var url = window.location.search;
 var queryString = {};
-console.log("MALLORY THIS IS THE JWT: ", jwt)
+console.log("MALLORY THIS IS THE JWT: ", JWT)
 // from https://stevenbenner.com/2010/03/javascript-regex-trick-parse-a-query-string-into-an-object/
 url.replace(
     new RegExp("([^?=&]+)(=([^&]*))?", "g"),
@@ -58,7 +58,7 @@ const jwt = JWT.sign({
   pendo.initialize({
 
     jwt: jwt,
-    signingKeyName: 'mal_-mal_-P9MAQ'
+    jwtKeyId: 'mal_-mal_-6a-iV'
 
   });
 })('7397188a-9b85-4825-5476-20de4cd4bfbe');
