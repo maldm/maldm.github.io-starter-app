@@ -55,13 +55,15 @@ const jwt = JWT.sign({
     y=e.createElement(n);y.async=!0;y.src='https://pendo-apollo-static.storage.googleapis.com/agent/static/'+apiKey+'/pendo.js';
     z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo')
   console.log('hello again')
-  pendo.initialize({
 
-    jwt: jwt,
-    signingKeyName: 'mal_-mal_-w2mg3'
-
-  });
 })('7397188a-9b85-4825-5476-20de4cd4bfbe');
+
+pendo.initialize({
+
+  jwt: jwt,
+  signingKeyName: 'mal_-mal_-w2mg3'
+
+});
 
 //window.pendo.updateOptions({ jwt:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiI3Mzk3MTg4YS05Yjg1LTQ4MjUtNTQ3Ni0yMGRlNGNkNGJmYmUiLCJhY2NvdW50Ijp7ImFjY291bnQiOnsiemlwQ29kZSI6Mjc2MDEsImlkIjoyLCJjaXR5IjoiUmFsZWlnaCJ9fSwidmlzaXRvciI6eyJpZCI6Im1hbGxvcnlAcGVuZG8uaW8iLCJmdWxsX25hbWUiOiIiLCJmaXJzdE5hbWUiOiJNQUxMT1JZIn0sImlhdCI6MTU4MDMyNDIyOH0.BG78vitQuXEkLgb7E82xu6WHSNxk0MfmZsVrtZZWbaA', signingKeyName: 'mal_-mal_-P9MAQ' });
 
