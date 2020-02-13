@@ -58,7 +58,7 @@ const jwt = JWT.sign({
   pendo.initialize({
 
     jwt: jwt,
-    jwtKeyId: 'mal_-mal_-6a-iV'
+    signingKeyName: 'mal_-mal_-w2mg3'
 
   });
 })('7397188a-9b85-4825-5476-20de4cd4bfbe');
