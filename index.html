@@ -6,10 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Apollo Core Only</title>
 
-  <script src="./src/snippet.js" type="module"></script>
 </head>
 <body>
   <h1>Apollo Core Only - Page 1</h1>
+  <div>
+    <li class="active">
+      <a href="indextwo.html">page two</a>
+    </li>
+    <li>
+      <a href="">page three</a>
+    </li>
+    <li>
+      <a href="">page four</a>
+    </li>
+  </div>
   <p>This app was compiled using the Babel Webpack Starter Pack which can compile ES2015, ES2016 and ES2017 code including Async/Await</p>
 
 <script>
@@ -25,5 +35,8 @@
 </script>
   
   <script src="build/app.bundle.js"></script>
+    <div>
+      <button onclick="window.location.href='indextwo.html'">second page button</button>
+    </div>
 </body>
 </html>
