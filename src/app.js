@@ -40,10 +40,10 @@ const jwt = JWT.sign({
   },
 
   visitor: {
-    //id: queryString.visitor || 'random@pendo',
-    id: 'mal@pendo.io',
-    full_name: '',
-    firstName: 'MALLORY'
+    id: queryString.visitor || 'random@pendo',
+    // id: 'mal@pendo.io',
+    // full_name: '',
+    // firstName: 'MALLORY'
     //lastName: 'BAE'
   }
 }, 'f6c0d63e-22ab-4f57-7bd7-6d8c3b0907c6');
@@ -51,7 +51,7 @@ const jwt = JWT.sign({
 pendo.initialize({
 
   jwt: jwt,
-  signingKeyName: 'mal_-mal_-w2mg3'
+  signingKeyName: 'mal_-mal_-NnXw2'
 
 });
 
