@@ -1,51 +1,20 @@
-const greeting = 'Hello World';
+const greeting = '*****hello from app.js';
 import JWT from 'jsonwebtoken';
 console.log(JWT);
 console.log(greeting);
 
-var url = window.location.search;
-var queryString = {};
-console.log("MALLORY THIS IS THE JWT: ", JWT)
-// from https://stevenbenner.com/2010/03/javascript-regex-trick-parse-a-query-string-into-an-object/
-url.replace(
-    new RegExp("([^?=&]+)(=([^&]*))?", "g"),
-    function ($0, $1, $2, $3) {
-      queryString[$1] = $3;
-    }
-);
-
-var accounts = [
-  {
-    zipCode: 90210,
-    id: 1,
-    city: 'Beverly Hills'
-  }, {
-    zipCode: 27601,
-    id: 2,
-    city: 'Raleigh'
-  }, {
-    zipCode: 10001,
-    id: 3,
-    city: 'New York City'
-  }
-];
-
-var account = accounts[Math.floor(Math.random() * accounts.length)];
-
-
 const jwt = JWT.sign({
-  apiKey: '7397188a-9b85-4825-5476-20de4cd4bfbe',
-  account: {
-    account
-  },
-
   visitor: {
-    id: queryString.visitor || 'random@pendo',
-    // id: 'mal@pendo.io',
-    // full_name: '',
-    // firstName: 'MALLORY'
-    //lastName: 'BAE'
-  }
+    id: 'mal@pendo.io',
+    full_name: 'Mallory Brame',
+    firstName: 'MALLORY',
+    lastName: 'BAE'
+  },
+  account: {
+    zipCode: 27601,
+    id: 'Ral_Account_1',
+    city: 'Raleigh'
+  },
 }, 'f6c0d63e-22ab-4f57-7bd7-6d8c3b0907c6');
 
 pendo.initialize({
