@@ -1,26 +1,30 @@
-const greeting = '*****hello from app.js';
+const greeting = 'hello from app.js';
 import JWT from 'jsonwebtoken';
-console.log(JWT);
+
 console.log(greeting);
 
 const jwt = JWT.sign({
   visitor: {
-    id: 'mal@pendo.io',
+    id: 'mallory@pendo.io',
     full_name: 'Mallory Brame',
     firstName: 'MALLORY',
     lastName: 'BAE'
   },
   account: {
     zipCode: 27601,
-    id: 'Ral_Account_1',
+    id: 'Ral_Account_3',
     city: 'Raleigh'
   },
-}, 'f6c0d63e-22ab-4f57-7bd7-6d8c3b0907c6');
+}, '6519ea9d-33a1-45fc-7281-d57300d2ac99');//'0e409d60-1800-43c3-7041-33c96915c502'); mal_core_only
+
+var decodedJwt = JWT.decode(jwt)
+console.log("**********************************DECODED JWT********************************** ", decodedJwt)
 
 pendo.initialize({
 
   jwt: jwt,
-  signingKeyName: 'mal_-mal_-NnXw2'
+  signingKeyName: 'mal_-sign-m-KWo'
+  //signingKeyName: 'mal_-mal_-iK-5w' mal_core_only
 
 });
 
